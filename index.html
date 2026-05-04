@@ -13,24 +13,37 @@
 </head>
 <body>
     <header>
-     <div class="logo">10-Ruby</div>
-     <nav>
-         <a href="index.html">Gallery</a>
-         <a href="classmates.html">Classmates</a>
-         <a href="attendance.html">Attendance Tracker</a>
-     </nav>
-     </header>
+    <div class="logo">10-Ruby</div>
+    <nav>
+        <a onclick="showPage('gallery')">Gallery</a>
+        <a onclick="showPage('classmates')">Classmates</a>
+        <a onclick="showPage('attendance')">Attendance</a>
+    </nav>
+</header>
+
+<!-- 📸 GALLERY -->
+<section id="gallery" class="active">
+    <h2>Gallery</h2>
+    <p>Put your photos here</p>
+</section>
+
+<!-- 👥 CLASSMATES -->
+<section id="classmates">
 
     <div class="container">
-    <h2>Classmates System</h2>
+        <h2>Classmates System</h2>
 
-    <input type="text" id="name" placeholder="Name"><br>
-    <input type="text" id="section" placeholder="Section"><br>
-    <input type="text" id="subject" placeholder="Favorite Subject"><br>
+        <input type="text" id="name" placeholder="Name"><br>
+        <input type="text" id="section" placeholder="Section"><br>
+        <input type="text" id="subject" placeholder="Favorite Subject"><br>
 
-    <button class="add-btn" py-click="add_classmate">Add</button>
-    <button class="show-btn" py-click="show_list">Show</button>
+        <button class="add-btn" py-click="add_classmate">Add</button>
+        <button class="show-btn" py-click="show_list">Show</button>
     </div>
+
+    <div id="output"></div>
+
+</section>
     
     <div class="card">
     <h2>Attendance Tracker</h2>

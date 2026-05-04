@@ -71,6 +71,16 @@
     </div>
 
 </section>
+
+<script>
+function showPage(pageId) {
+    document.querySelectorAll("section").forEach(sec => {
+        sec.style.display = "none";
+    });
+
+    document.getElementById(pageId).style.display = "block";
+}
+</script>
     <div id='output'></div>
     <py-script src="main.py"></py-script>
 </body>

@@ -45,28 +45,32 @@
 
 </section>
     
+<!-- 📊 ATTENDANCE -->
+<section id="attendance">
+
     <div class="card">
-    <h2>Attendance Tracker</h2>
+        <h2>Attendance Tracker</h2>
 
-    <label>Select Day</label>
-    <select id="day">
-      <option>Mon</option>
-      <option>Tue</option>
-      <option>Wed</option>
-      <option>Thu</option>
-      <option>Fri</option>
-    </select>
+        <label>Select Day</label>
+        <select id="day">
+            <option>Mon</option>
+            <option>Tue</option>
+            <option>Wed</option>
+            <option>Thu</option>
+            <option>Fri</option>
+        </select>
 
-    <label>Absences</label>
-    <input type="number" id="absences" value="0">
+        <label>Absences</label>
+        <input type="number" id="absences" value="0">
 
-    <button py-click="update_graph">Submit</button>
+        <button py-click="update_graph">Submit</button>
     </div>
 
     <div class="graph">
-      <div id="plot"></div>
+        <div id="plot"></div>
     </div>
-  
+
+</section>
     <div id='output'></div>
     <py-script src="main.py"></py-script>
 </body>

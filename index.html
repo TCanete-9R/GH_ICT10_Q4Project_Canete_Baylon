@@ -30,8 +30,6 @@
 
     <button class="add-btn" py-click="add_classmate">Add</button>
     <button class="show-btn" py-click="show_list">Show</button>
-
-    <div id='output'></div>
     </div>
     
     <div class="card">
@@ -49,14 +47,14 @@
     <label>Absences</label>
     <input type="number" id="absences" value="0">
 
-    <button py-click="update_graph()">Submit</button>
-  </div>
+    <button py-click="update_graph">Submit</button>
+    </div>
 
-  <div class="graph">
-    <div id="plot"></div>
-  </div>
+    <div class="graph">
+      <div id="plot"></div>
+    </div>
   
     <div id='output'></div>
-    <script type="py" src="main.py"></script>
+    <py-script src="main.py"></py-script>
 </body>
 </html>

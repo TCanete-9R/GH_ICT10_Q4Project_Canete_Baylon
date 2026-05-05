@@ -1,22 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5e9e2;
+    background: #0f172a;
     margin: 0;
     padding: 0;
+    color: #e2e8f0;
 }
 
 #div1 {
     width: 400px;
     margin: 60px auto;
     padding: 25px;
-    background: #ffffff;
+    background: #1e293b;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(128, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
     text-align: center;
 }
 
 h1 {
-    color: #800000;
+    color: #22d3ee;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -25,15 +26,17 @@ input[type="text"] {
     width: 90%;
     padding: 10px;
     margin: 8px 0;
-    border: 2px solid #d6b3b3;
+    border: 2px solid #334155;
     border-radius: 8px;
     outline: none;
     transition: 0.3s;
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
 input[type="text"]:focus {
-    border-color: #800000;
-    box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+    border-color: #22d3ee;
+    box-shadow: 0 0 5px rgba(34, 211, 238, 0.4);
 }
 
 input[type="button"] {
@@ -41,25 +44,25 @@ input[type="button"] {
     padding: 10px 15px;
     border: none;
     border-radius: 8px;
-    background: #800000;
-    color: #fff;
+    background: #22d3ee;
+    color: #0f172a;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
 }
 
 input[type="button"]:hover {
-    background: #a52a2a;
+    background: #06b6d4;
 }
 
 #output {
     width: 400px;
     margin: 20px auto;
     padding: 15px;
-    background: #fff;
-    border-left: 6px solid #800000;
+    background: #1e293b;
+    border-left: 6px solid #22d3ee;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     font-size: 15px;
 }
 
@@ -68,15 +71,15 @@ input[type="button"]:hover {
 }
 
 header {
-    background: #800000;
-    color: white;
+    background: #020617;
+    color: #22d3ee;
     padding: 15px;
     display: flex;
     justify-content: space-between;
 }
 
 nav a {
-    color: white;
+    color: #22d3ee;
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
@@ -94,17 +97,9 @@ nav a:hover {
 }
 
 .card {
-    background: white;
+    background: #1e293b;
     padding: 10px;
     border-radius: 10px;
-}
-
-section {
-    display: none;
-}
-
-section.active {
-    display: block;
 }
 
 section {

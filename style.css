@@ -106,3 +106,11 @@ section {
 section.active {
     display: block;
 }
+
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}

@@ -32,30 +32,26 @@ def show_list(e):
         cm.introduce()
 
 # Initial data
-days = np.array(['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'])
+# Initial data
+days = np.array(['Mon','Tue','Wed','Thu','Fri'])
 absences = np.array([0, 0, 0, 0, 0])
 
 def update_graph(event):
-    day_index = int(document.querySelector("#day-select").value)
-    input_value = document.querySelector("#absence-input").value
-    
-    if input_value == "":
-        return
-        
-   
-    absences[day_index] = int(input_value)
-    
-   
-    plt.figure(figsize=(6,4)) 
-    plt.plot(days, absences, marker='o') 
-    
+    global absences
+
+    day = document.getElementById("day").value
+    value = int(document.getElementById("absences").value)
+
+    index = np.where(days == day)[0][0]
+    absences[index] = value
+
+    plt.clf()
+    plt.plot(days, absences, marker='o')
     plt.title("Weekly Attendance (Absences)")
     plt.xlabel("Days")
     plt.ylabel("Number of Absences")
-    
-    
-    document.querySelector("#plot-target").innerHTML = "" 
-    display(plt.gcf(), target="plot-target") 
+
+    display(plt, target="plot")
 
 
 update_graph(None)

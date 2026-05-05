@@ -32,32 +32,30 @@ def show_list(e):
         cm.introduce()
 
 # Initial data
-days = np.array(['Mon','Tue','Wed','Thu','Fri'])
-sales = np.array([1, 0, 7, 4, 9])  # starting absences
+days = np.array(['Mon', 'Tues', 'Wed', 'Thurs', 'Fri'])
+absences = np.array([0, 0, 0, 0, 0])
 
-def draw_graph():
-    plt.clf()
-    plt.plot(days, sales, marker='o')
+def update_graph(event):
+    day_index = int(document.querySelector("#day-select").value)
+    input_value = document.querySelector("#absence-input").value
+    
+    if input_value == "":
+        return
+        
+   
+    absences[day_index] = int(input_value)
+    
+   
+    plt.figure(figsize=(6,4)) 
+    plt.plot(days, absences, marker='o') 
+    
     plt.title("Weekly Attendance (Absences)")
     plt.xlabel("Days")
     plt.ylabel("Number of Absences")
-    display(plt, target="plot")
+    
+    
+    document.querySelector("#plot-target").innerHTML = "" 
+    display(plt.gcf(), target="plot-target") 
 
-# First render
-draw_graph()
 
-def update_graph():
-    global sales
-
-    day = document.getElementById("day").value
-    value = int(document.getElementById("absences").value)
-
-    index = np.where(days == day)[0][0]
-    sales[index] = value
-
-    # NumPy stats (like your original code)
-    print("Shape:", sales.shape)
-    print("Mean:", np.mean(sales))
-    print("Max:", np.max(sales))
-
-    draw_graph()
+update_graph(None)

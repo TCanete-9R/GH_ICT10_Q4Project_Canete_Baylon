@@ -19,12 +19,10 @@
     </header>
 
 
-    <section class="title">
-        <h1>Highlights of Our 10-Ruby Journey</h1>
-    </section>
+<section id="gallery" class="active">
+    <h1>Highlights of Our 10-Ruby Journey</h1>
 
-    <section class="gallery">
-
+    <div class="gallery">
         <div class="card">
             <img src="photo1.jpg">
             <h3>CAT GRADUATION</h3>
@@ -40,18 +38,31 @@
         <div class="card">
             <img src="photo3.jpg">
             <h3>POETRY AND PUBLIC SPEAKING FESTIVAL</h3>
-            <p>Students shows their skills by creating engaging presentations, boosting their confidence, and lastly to enchance their comunication.</p>
+            <p>Students show their skills and boost confidence.</p>
         </div>
 
         <div class="card">
             <img src="photo4.jpg">
             <h3>CLEAN UP ACTIVITY</h3>
-            <p>Students helps clean and maintain the environment.</p>
+            <p>Students help maintain the environment.</p>
         </div>
+    </div>
+</section>
 
     
 
     </section>
+
+    <script>
+    function showPage(pageId) {
+        document.querySelectorAll("section").forEach(sec => {
+            sec.style.display = "none";
+    });
+
+    document.getElementById(pageId).style.display = "block";
+    
+    }
+    </script>
 
   
     <footer>
